@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.jujiashun.com">
-  <title>Archives: 2020 | 琚佳顺的博客</title>
+  <title>PAT甲级 二叉树相关 | 琚佳顺的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="琚佳顺的博客">
-<meta property="og:url" content="http://www.jujiashun.com/archives/2020/index.html">
+  <meta name="description" content="《算法笔记》 重点摘要 1020 Tree Traversals (25) 1086 Tree Traversals Again (25) 1102 Invert a Binary Tree (25) 1119 Pre- and Post-order Traversals (30) 1127 ZigZagging on a Tree (30) 1138 Postorder Traversal (">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PAT甲级 二叉树相关">
+<meta property="og:url" content="http://www.jujiashun.com/2022/02/26/erchashu/index.html">
 <meta property="og:site_name" content="琚佳顺的博客">
+<meta property="og:description" content="《算法笔记》 重点摘要 1020 Tree Traversals (25) 1086 Tree Traversals Again (25) 1102 Invert a Binary Tree (25) 1119 Pre- and Post-order Traversals (30) 1127 ZigZagging on a Tree (30) 1138 Postorder Traversal (">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-02-26T12:30:00.000Z">
+<meta property="article:modified_time" content="2022-02-26T08:06:00.000Z">
 <meta property="article:author" content="琚佳顺">
+<meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="琚佳顺的博客" type="application/atom+xml">
@@ -193,76 +198,309 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-erchashu" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/13/zookeeper%E9%94%81%E6%9C%BA%E5%88%B6/" class="archive-article-date">
-        <time datetime="2020-04-13T03:26:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/13/zookeeper%E9%94%81%E6%9C%BA%E5%88%B6/" target="_blank">Curator框架实现分部锁</a>
   
+    <h1 class="article-title" itemprop="name">
+      PAT甲级 二叉树相关
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/02/26/erchashu/" class="archive-article-date">
+        <time datetime="2022-02-26T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">601字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ul>
+<li>《算法笔记》 重点摘要</li>
+<li>1020 Tree Traversals (25)</li>
+<li>1086 Tree Traversals Again (25)</li>
+<li>1102 Invert a Binary Tree (25)</li>
+<li>1119 Pre- and Post-order Traversals (30)</li>
+<li>1127 ZigZagging on a Tree (30)</li>
+<li>1138 Postorder Traversal (25)</li>
+<li>1151 LCA in a Binary Tree (30)</li>
+<li>附：二叉树链式实现</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p> 《算法笔记》 9.2 二叉树 重点摘要</p>
+<ol>
+<li>常考边界条件</li>
+</ol>
+<ul>
+<li>空树：没有结点</li>
+<li>树只有一个根节点时，它亦为叶子结点</li>
+</ul>
+<ol start="2">
+<li>完全二叉树</li>
+</ol>
+<ul>
+<li>建立大小为 2^k 的数组，其中 k 为完全二叉树的最大高度</li>
+<li>若题目规定为完全二叉树，数组大小 n+1 即可</li>
+<li>1 号位存放根节点</li>
+<li>任一编号为 x 的结点，左孩子编号 2x，右孩子编号 2x+1</li>
+<li>判断结点是否为叶结点：2x &gt; n</li>
+<li>判断结点是否为空：x &gt; n</li>
+</ul>
+<ol start="3">
+<li>二叉树静态实现<br>(1) 定义</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct Node&#123;</span><br><span class="line">    typename data;</span><br><span class="line">    int level;</span><br><span class="line">    int lchild;</span><br><span class="line">    int rchild;</span><br><span class="line">&#125; node[MAXN];</span><br></pre></td></tr></table></figure>
+
+<p>(2) 新建结点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int index = 0;</span><br><span class="line">int newNode (int value)&#123;</span><br><span class="line">    node[index].data = value;</span><br><span class="line">    node-&gt;lchild = node-&gt;rchild = -1;</span><br><span class="line">    return index++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3) 插入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void insert (int &amp;root, int value)&#123;</span><br><span class="line">    if (root == -1)&#123;</span><br><span class="line">        root = newNode(value);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if (由二叉树性质应插入在左子树) insert(node[root].lchild, value);</span><br><span class="line">    else insert(node[root].rchild, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(4) 创建</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int create(int value[], int n)&#123;</span><br><span class="line">    int root = -1;</span><br><span class="line">    for (int i = 0; i &lt; n; i++) insert(root, data[i]);</span><br><span class="line">    return root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(5) 查找&amp;修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void search (int root, int value, int newvalue)&#123;</span><br><span class="line">    if (root == -1) return;</span><br><span class="line">    if (node[root].data == value) node[root].data = newvalue;</span><br><span class="line">    search(node[root].lchild, value, newvalue);</span><br><span class="line">    search(node[root].rchild, value, newvalue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(6) 先序遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void preorder(int root)&#123;</span><br><span class="line">    if (root == -1) return;</span><br><span class="line">    printf(&quot;%d\n&quot;, node[root].data);</span><br><span class="line">    preorder(node[root].lchild);</span><br><span class="line">    preorder(node[root].rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(7) 中序遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void inorder(int root)&#123;</span><br><span class="line">    if (root == -1) return;</span><br><span class="line">    preorder(node[root].lchild);</span><br><span class="line">    printf(&quot;%d\n&quot;, node[root].data);</span><br><span class="line">    preorder(node[root].rchild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(8) 后序遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void postorder(int root)&#123;</span><br><span class="line">    if (root == -1) return;</span><br><span class="line">    preorder(node[root].lchild);</span><br><span class="line">    preorder(node[root].rchild);</span><br><span class="line">    printf(&quot;%d\n&quot;, node[root].data);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(10) 层序遍历</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void levelorder(int root)&#123;</span><br><span class="line">    queue&lt;int&gt; q;</span><br><span class="line">    q.push(root);</span><br><span class="line">    while (!q.empty())&#123;</span><br><span class="line">        int now = q.front();</span><br><span class="line">        q.pop();</span><br><span class="line">        printf(&quot;%d&quot;, node[now].data);</span><br><span class="line">        if (node[now].lchild != -1) q.push(node[now].lchild);</span><br><span class="line">        if (node[now].rchild != -1) q.push(node[now].rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(11) 根据先序+中序重建树</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int create (int preL, int preR, int inL, int inR)&#123;</span><br><span class="line">    if (preL &gt; preR) return -1;</span><br><span class="line">    int root = new Node(pre[preL]);</span><br><span class="line">    int k;</span><br><span class="line">    for (k = inL; k &lt;= inR; k++)</span><br><span class="line">        if (in[k] == pre[preL]) break;</span><br><span class="line">    int numLeft = k - inL;  // 左子树结点个数</span><br><span class="line">    node[root].lchild = create(preL+1, preL+numLeft, inL, k-1);</span><br><span class="line">    node[root].rchild = create(preL+numLeft+1, preR, k+1, inR);</span><br><span class="line">    return root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>老板恭喜发财<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          琚佳顺
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://www.jujiashun.com/2022/02/26/erchashu/" title="PAT甲级 二叉树相关" target="_blank">http://www.jujiashun.com/2022/02/26/erchashu/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日志</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Zookeeper//" class="article-tag-list-link color5">Zookeeper</a>
+        			<a href="/categories/code//" class="article-tag-list-link color5">code</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.jujiashun.com/2022/02/26/erchashu/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/12/2021%E4%B8%93%E5%8D%87%E6%9C%AC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2021浙江省专升本总结与复盘</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -303,8 +541,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
