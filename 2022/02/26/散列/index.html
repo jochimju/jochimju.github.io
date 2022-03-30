@@ -6,24 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.jujiashun.com">
-  <title>2021浙江省专升本总结与复盘 | 琚佳顺的博客</title>
+  <title>PAT 散列表相关 | 琚佳顺的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="今年运气不错，成功考上了杭州电子科技大学软件工程专业，简单记录回顾一下备考历程。">
+  <meta name="description" content="目录 《算法笔记》 重点摘要 1041 Be Unique（20） 1048 Find Coins（25） 1050 String Subtraction（20） 1084 Broken Keyboard (20)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2021浙江省专升本总结与复盘">
-<meta property="og:url" content="http://www.jujiashun.com/2021/04/12/2021%E4%B8%93%E5%8D%87%E6%9C%AC/index.html">
+<meta property="og:title" content="PAT 散列表相关">
+<meta property="og:url" content="http://www.jujiashun.com/2022/02/26/%E6%95%A3%E5%88%97/index.html">
 <meta property="og:site_name" content="琚佳顺的博客">
-<meta property="og:description" content="今年运气不错，成功考上了杭州电子科技大学软件工程专业，简单记录回顾一下备考历程。">
+<meta property="og:description" content="目录 《算法笔记》 重点摘要 1041 Be Unique（20） 1048 Find Coins（25） 1050 String Subtraction（20） 1084 Broken Keyboard (20)">
 <meta property="og:locale">
-<meta property="og:image" content="http://www.jujiashun.com/images/2021zsb/91E47F4B11DE40FD79C02E6E84FEBCB0.jpg">
-<meta property="article:published_time" content="2021-04-12T04:57:54.000Z">
-<meta property="article:modified_time" content="2021-05-19T08:06:00.000Z">
+<meta property="article:published_time" content="2022-02-26T12:30:00.000Z">
+<meta property="article:modified_time" content="2022-02-26T08:06:00.000Z">
 <meta property="article:author" content="琚佳顺">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.jujiashun.com/images/2021zsb/91E47F4B11DE40FD79C02E6E84FEBCB0.jpg">
   
     <link rel="alternative" href="/atom.xml" title="琚佳顺的博客" type="application/atom+xml">
   
@@ -200,14 +198,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2021专升本" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-散列" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      2021浙江省专升本总结与复盘
+      PAT 散列表相关
     </h1>
   
 
@@ -219,8 +217,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2021/04/12/2021%E4%B8%93%E5%8D%87%E6%9C%AC/" class="archive-article-date">
-        <time datetime="2021-04-12T04:57:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-12</time>
+<a href="/2022/02/26/%E6%95%A3%E5%88%97/" class="archive-article-date">
+        <time datetime="2022-02-26T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
 </a>
 
   
@@ -233,7 +231,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.3k字</span>
+      <span class="post-count">1.1k字</span>
     </span>
   </span>
 
@@ -242,7 +240,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -253,39 +251,63 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>今年运气不错，成功考上了杭州电子科技大学软件工程专业，简单记录回顾一下备考历程。</p>
+    <h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><ul>
+<li>《算法笔记》 重点摘要</li>
+<li>1041 Be Unique（20）</li>
+<li>1048 Find Coins（25）</li>
+<li>1050 String Subtraction（20）</li>
+<li>1084 Broken Keyboard (20)</li>
+</ul>
 <span id="more"></span>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为不想从事运维相关的工作加上只有大专学历，故大一刚开学的时候就打算参加专升本考试，国庆左右报了宏图机构的专升本课程，大概1.3w左右，没报文亮是因为文亮有点贵，大概都是1.8w+,其他的教育机构也没深入的了解，就跟着学姐一起报了。事实证明专升本机构没啥用，自制力够的话完全可以自学。</p>
-<h2 id="基础阶段"><a href="#基础阶段" class="headerlink" title="基础阶段"></a>基础阶段</h2><ul>
-<li>2019.10-2020.5：高数部分:跟着B站的老师过了两遍高数，第一遍跟着樊顺厚老师，大概3个月学完了高数，樊老师讲的很基础，非常适合我这种0基础的学生，高三的时候因竞赛的原因一年没碰数学。第二遍跟着宋浩老师，宋浩的课风趣幽默些，平时课上也经常讲故事，水时间。边看网课边刷宏图发的基础题库。英语部分：每天早上宏图单词书背50个词，睡前看一遍，随意过了一遍语法，因为根本看不懂。</li>
+<h3 id="《算法笔记》-4-2-散列-重点摘要"><a href="#《算法笔记》-4-2-散列-重点摘要" class="headerlink" title="《算法笔记》 4.2 散列 重点摘要"></a>《算法笔记》 4.2 散列 重点摘要</h3><h4 id="1-散列"><a href="#1-散列" class="headerlink" title="1. 散列"></a>1. 散列</h4><p>将元素通过一个函数转换为整数，使得该整数可以尽量唯一地代表这个元素。</p>
+<h4 id="2-散列函数"><a href="#2-散列函数" class="headerlink" title="2. 散列函数"></a>2. 散列函数</h4><blockquote>
+<p>一般直接用STL中的 map 或 unordered_map，除非必须模拟这些方法或对算法效率要求较高，否则不需要自己实现解决冲突的方法</p>
+</blockquote>
+<h5 id="1-直接定址法"><a href="#1-直接定址法" class="headerlink" title="(1) 直接定址法"></a>(1) 直接定址法</h5><ul>
+<li>恒等变换：将 key(输入的数) 作为数组下标 ⭐——最常见最实用</li>
+<li>线性变换：H(key) = a * key + b</li>
 </ul>
-<h2 id="强化阶段"><a href="#强化阶段" class="headerlink" title="强化阶段"></a>强化阶段</h2><ul>
-<li>2020.6-2021.2：因为疫情的原因，学校推迟到5月份才开学，上了2个月又放暑假了，宏图没安排线下课程，故又是一直看宏图的网课。高数部分：看了宏图高数牌面——屠玮玮老师的强化课，讲的确实很好，主要人美声甜，解题的思路非常清晰。把宏图强化的题库做了一部分，发现题目太难，一半题都是超纲，没太大意义。于是又偷偷要来了寒假集训的课程和题库刷。英语部分: 看了老师讲各个题型的解法，可能是我英语天生不好，听了我也不会用，全靠运气，每天还是坚持背单词，偶尔刷刷阅读。</li>
+<h5 id="2-平方取中法-——-很少用"><a href="#2-平方取中法-——-很少用" class="headerlink" title="(2) 平方取中法 —— 很少用"></a>(2) 平方取中法 —— 很少用</h5><p>取 key 平方的中间若干位作为 hash 值</p>
+<h5 id="3-除留余数法"><a href="#3-除留余数法" class="headerlink" title="(3) 除留余数法"></a>(3) 除留余数法</h5><p>H(key) = key % mod (表长Tsize &gt;= mod，否则会越界)</p>
+<ul>
+<li>开放定址法<ul>
+<li>线性探查法：H(key), H(key)+1, …</li>
+<li>平方探查法：H(key), H(key)+1^2, H(key)-1^2, H(key)+2^2, H(key)-2^2, …<ul>
+<li>if (H(key) + k^2 &gt; Tsize) H(key)+k^2 % Tsize</li>
+<li>if (H(key) - k^2 &lt; 0) ((H(key) - k^2) % Tsize + Tsize) % Tsize （可只正向探查避免此种麻烦）</li>
 </ul>
-<h2 id="冲刺阶段"><a href="#冲刺阶段" class="headerlink" title="冲刺阶段"></a>冲刺阶段</h2><ul>
-<li>2021.3-2021.4: 因为已经很久没有参加过文化课考试了，非常慌，第一次模拟考试的时候，连三本线都不够，英语直接拉跨到只有70分。于是逼自己每天去图书馆，第一次去图书馆就遇到一个很清纯的女孩子也在准备专升本，后来我去图书馆的目的就不再是学习了。高数部分：基本题型已经全部掌握，全部公式也都记得滚瓜烂熟，剩下的超纲题只能看缘分。英语部分：重点1000词来回背了10遍左右，阅读掌握了一些技巧，作文方面对其中热门的类型，自己写了一套模板。考前一个月还参加了宏图的冲刺班，线下模拟考了5次，宏图的试卷实在有点恶心，一些大题考的比较偏，每次成绩稳定在240左右。按照前几年的分数，刚好是一本分数线徘徊。</li>
+</li>
 </ul>
-<h2 id="正式考试"><a href="#正式考试" class="headerlink" title="正式考试"></a>正式考试</h2><ol>
-<li><p>早上考的高数，选择填空还是偏基础，后面对了答案分数都拿到了，计算题部分这次拉跨了，第一道计算题求极限粗心做错了，错失送分题，一道空间解析几何的题目，求两异面直线距离，这道题超纲了，考前还做过这种题，结果以为不会考直接就放弃了。今年题目难度跟去年差不多，但是计算量偏大，给的两张草稿纸完全不够用，25题综合题给的数非常规，导致最后没算出答案。压轴的证明题难度不大，零点+罗尔就出来了。</p>
 </li>
-<li><p>高数考完，感觉自己要凉凉了，特别是跟同学交流了一下，发现自己送分题的分都丢了。以为是要错失一本了。</p>
-</li>
-<li><p>下午考英语，难度中等。阅读发挥的不是很好，错了3个，完型和选词填空难度比较小，拿的分数比较多，翻译部分考察的语法和单词都不是很难，作文部分，考的类型跟去年一样，很不巧的是我刚好没准备这个类型的模板，只能硬着头皮写，最后考完英语感觉跟平时发挥差不多，预估自己大概235-240之间，就出去玩了。</p>
-</li>
-<li><p>成绩出来237，高数125+英语112。也还能接受。猜测今年分数线较去年应该有所降低。</p>
-<p><img src="/images/2021zsb/91E47F4B11DE40FD79C02E6E84FEBCB0.jpg" alt="91E47F4B11DE40FD79C02E6E84FEBCB0"></p>
-</li>
-<li><p>分数线公布之后，浙工商237，刚好在线上，估计杭电应该是有了。</p>
-</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
-<li>专升本只要肯努力，上岸三本是没什么问题的。</li>
-<li>备考期间还是要多多锻炼身体，身体是革命的本钱。</li>
-<li>专升本机构的寒暑假集训和考前集训是最有用的，平时的基础课和强化课作用不大。</li>
-<li>报考志愿的时候要根据自己的实力来填，不然会出现诸如240+去三本的情况。</li>
-<li>最后，专升本还是比较看运气和临场发挥，今年运气不错，有惊无险的上岸了。</li>
+<li>链地址法</li>
 </ul>
+<h4 id="3-字符串-hash"><a href="#3-字符串-hash" class="headerlink" title="3. 字符串 hash"></a>3. 字符串 hash</h4><p>将一个字符串S映射为一个整数，使得整数可以尽可能唯一地代表字符串S</p>
+<h5 id="1-字符串由大写字母-A-Z-组成"><a href="#1-字符串由大写字母-A-Z-组成" class="headerlink" title="(1) 字符串由大写字母 A-Z 组成"></a>(1) 字符串由大写字母 A-Z 组成</h5><p>将大写字母 A-Z 视为 0-25，即对应到了26进制中，再转换为10进制。转换为的整数最大为26^len-1，len为字符串长度</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hashFunc</span><span class="params">(<span class="keyword">char</span> S[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)&#123;</span><br><span class="line">        id = id * <span class="number">26</span> + (S[i] - <span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> id;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-字符串由大写字母-A-Z-和小写字母-a-z-组成"><a href="#2-字符串由大写字母-A-Z-和小写字母-a-z-组成" class="headerlink" title="(2) 字符串由大写字母 A-Z 和小写字母 a-z 组成"></a>(2) 字符串由大写字母 A-Z 和小写字母 a-z 组成</h5><p>52进制转10进制问题</p>
+<h5 id="3-字符串由大写字母-A-Z，小写字母-a-z-和-数字-1-9-组成"><a href="#3-字符串由大写字母-A-Z，小写字母-a-z-和-数字-1-9-组成" class="headerlink" title="(3) 字符串由大写字母 A-Z，小写字母 a-z 和 数字 1-9 组成"></a>(3) 字符串由大写字母 A-Z，小写字母 a-z 和 数字 1-9 组成</h5><ul>
+<li>(1) 62进制转10进制问题</li>
+<li>(2) 若保证字符串末尾是确定个数的数字，可将前面英文字母部分转换为整数后将数字拼接上去</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hashFunc</span><span class="params">(<span class="keyword">char</span> S[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len - <span class="number">1</span>; i++)&#123;</span><br><span class="line">        id = id * <span class="number">26</span> + (S[i] - <span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    id = id * <span class="number">10</span> + (S[len<span class="number">-1</span>] - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> id;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1041-Be-Unique（20）"><a href="#1041-Be-Unique（20）" class="headerlink" title="1041 Be Unique（20）"></a>1041 <strong>Be Unique</strong>（20）</h4><p>建立一个数组，存储每个数字出现的次数，然后遍历一遍输入的顺序看是否有出现次数为1的数字</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">100001</span>], m[<span class="number">100000</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;a[i]);</span><br><span class="line">        m[a[i]]++; <span class="comment">//用下标存储数字</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123; <span class="comment">//如果下标对应的数字等于1，说明只出现了一次 </span></span><br><span class="line">        <span class="keyword">if</span>(m[a[i]] == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, a[i]);</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;None&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1048-Find-Coins（25）"><a href="#1048-Find-Coins（25）" class="headerlink" title="1048 Find Coins（25）"></a><strong>1048 Find Coins</strong>（25）</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">1001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,temp;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>,&amp;n,&amp;m);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;temp);</span><br><span class="line">        a[temp]++;         </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1001</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i])</span><br><span class="line">        &#123;</span><br><span class="line">            a[i]--;</span><br><span class="line">            <span class="keyword">if</span> (m &gt; i &amp;&amp; a[m-i])   <span class="comment">//如果要付的钱比硬币大 并且差的硬币存在，则找到答案。</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>,i,m-i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;No Solution&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1050-String-Subtraction（20）"><a href="#1050-String-Subtraction（20）" class="headerlink" title="1050 String Subtraction（20）"></a><strong>1050 String Subtraction</strong>（20）</h4><p>给出两个字符串，在第一个字符串中删去第二个字符串中出现过的所有字符并输出</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">char</span> s1[<span class="number">100000</span>],s2[<span class="number">100000</span>];</span><br><span class="line"><span class="keyword">bool</span> HashTable[<span class="number">128</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin.<span class="built_in">getline</span>(s1,<span class="number">100000</span>);   <span class="comment">//获取整行用cin.getline </span></span><br><span class="line">    cin.<span class="built_in">getline</span>(s2,<span class="number">100000</span>);</span><br><span class="line">    <span class="keyword">int</span> len1 = <span class="built_in">strlen</span>(s1),len2 = <span class="built_in">strlen</span>(s2);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len2; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        HashTable[s2[i]] = <span class="literal">true</span>;  <span class="comment">//第二个字符串里的字符的table设置为true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len1; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (HashTable[s1[i]] == <span class="literal">false</span>)  <span class="comment">//如果在第二个字符中没出现过</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,s1[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1084-Broken-Keyboard（20）"><a href="#1084-Broken-Keyboard（20）" class="headerlink" title="1084  Broken Keyboard（20）"></a>1084  <strong>Broken Keyboard</strong>（20）</h4><p>用string的find函数，遍历字符串s1，当当前字符s1[i]不在s2中，它的大写也不在ans中时，将当前字符的大写放入ans中，最后输出ans字符串即可</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    string s1,s2,ans;  <span class="comment">//结果ans</span></span><br><span class="line">    cin &gt;&gt; s1 &gt;&gt; s2;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s1.<span class="built_in">length</span>(); i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (s2.<span class="built_in">find</span>(s1[i]) == string::npos &amp;&amp; ans.<span class="built_in">find</span>(<span class="built_in">toupper</span>(s1[i])) == string::npos) <span class="comment">//如果在s2中没找到s1 并且 ans找不到 s1时，将改字符加到ans中</span></span><br><span class="line">            ans += <span class="built_in">toupper</span>(s1[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
 
     
 
@@ -332,7 +354,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://www.jujiashun.com/2021/04/12/2021专升本/" title="2021浙江省专升本总结与复盘" target="_blank">http://www.jujiashun.com/2021/04/12/2021专升本/</a>
+          <a href="http://www.jujiashun.com/2022/02/26/散列/" title="PAT 散列表相关" target="_blank">http://www.jujiashun.com/2022/02/26/散列/</a>
         </li>
         
         <li>
@@ -366,7 +388,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/life//" class="article-tag-list-link color5">life</a>
+        			<a href="/categories/code//" class="article-tag-list-link color5">code</a>
         		</li>
       		
 		</ul>
@@ -421,7 +443,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.jujiashun.com/2021/04/12/2021%E4%B8%93%E5%8D%87%E6%9C%AC/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.jujiashun.com/2022/02/26/%E6%95%A3%E5%88%97/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -436,11 +458,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/02/26/%E4%BA%8C%E5%8F%89%E6%9F%A5%E6%89%BE%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/26/%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          PAT甲级 二叉查找树相关
+          PAT甲级 排序相关
         
       </div>
     </a>
